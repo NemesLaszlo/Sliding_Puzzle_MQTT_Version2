@@ -19,11 +19,11 @@
     <Administrator>false</Administrator>
   </User>
     <User>
-    <UserName>11:22:33:55</UserName>
+    <UserName>11:22:44:55</UserName>
     <Password>123</Password>
     <Email />
-    <FirstName>Game</FirstName>
-    <LastName>Puzzle</LastName>
+    <FirstName>Game_Ver2</FirstName>
+    <LastName>Puzzle_Ver2</LastName>
     <Device>true</Device>
     <Administrator>false</Administrator>
   </User>

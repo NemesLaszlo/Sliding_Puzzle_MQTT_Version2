@@ -2,14 +2,14 @@
 <ArrayOfDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Device>
-    <MacAddress>11:22:33:55</MacAddress>
+    <MacAddress>11:22:44:55</MacAddress>
     <IOType>Raspberry Pi 3</IOType>
-    <DeviceName>PuzzleGame</DeviceName>
+    <DeviceName>PuzzleGame_Ver2</DeviceName>
     <CurrentOwner>User1</CurrentOwner>
     <Components>
       <Component xsi:type="MultiSwitcher">
         <Id>5</Id>
-        <DisplayName>Puzzle</DisplayName>
+        <DisplayName>Puzzle_Ver2</DisplayName>
         <CurrentValue>
           <DisplayValue>0</DisplayValue>
           <Value>0</Value>
