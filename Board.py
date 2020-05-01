@@ -71,6 +71,17 @@ class Board(Frame):
         Handle the number keys, and check the current situation -> finished, and win or net.
         And handle the counter of the moves to the win.
         """
+
+        # self.client.subscribe("devices/11:22:44:55/inbox/User1/function/0")
+        # self.client.subscribe("devices/11:22:44:55/inbox/User1/function/1")
+        # self.client.subscribe("devices/11:22:44:55/inbox/User1/function/2")
+        # self.client.subscribe("devices/11:22:44:55/inbox/User1/function/3")
+        # self.client.subscribe("devices/11:22:44:55/inbox/User1/function/4")
+        # self.client.subscribe("devices/11:22:44:55/inbox/User1/function/5")
+        # self.client.subscribe("devices/11:22:44:55/inbox/User1/function/6")
+        # self.client.subscribe("devices/11:22:44:55/inbox/User1/function/7")
+        # self.client.subscribe("devices/11:22:44:55/inbox/User1/function/8")
+
         self.tiles.slide_parameters(event.keysym)
         if self.tiles.is_correct():
             self.win(self.tiles.moves)
