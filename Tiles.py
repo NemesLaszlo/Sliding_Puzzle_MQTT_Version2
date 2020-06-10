@@ -15,6 +15,11 @@ class Tiles:
         self.grid = grid
         self.moves = 0
 
+        # we need two ids for the swap of the two positions of the picked tiles
+        self.swap_event_counter = 0  # counter for the swap
+        self.part1 = -1  # first tile part for the swap event
+        self.part2 = -1  # second tile part for the swap event
+
     def add(self, tile):
         """
         tile - parameter, part of the picture.
@@ -44,18 +49,26 @@ class Tiles:
         t1.position_in_list, t2.position_in_list = t2.position_in_list, t1.position_in_list  # position swap, tiles list position.
         self.moves += 1  # moves counter until the win.
         print("-------------------")
-        self.show()
+        if self.swap_event_counter == 2:
+            self.show()
+            self.swap_event_counter = 0
 
     def slide_parameters(self, key):
         """
         Handle the information of the picked picture parts, and call the change_tiles.
         """
         try:
-            part1 = -1
-            if 0 <= int(key) <= 8:
-                part1 = int(key)
-            part2 = part1 + 1
-            self.change_tiles(part1, part2)
+            if 0 <= int(key) <= 8 and self.swap_event_counter == 0:
+                self.part1 = int(key)
+                self.swap_event_counter += 1
+                # print(self.swap_event_counter)
+            elif 0 <= int(key) <= 8 and self.swap_event_counter < 2:
+                self.part2 = int(key)
+                self.swap_event_counter += 1
+                # print(self.swap_event_counter)
+                if self.swap_event_counter == 2:
+                    # print("swap call")
+                    self.change_tiles(self.part1, self.part2)
         except:
             pass
 

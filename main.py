@@ -32,24 +32,24 @@ def main():
     main function, which create a tkinter object,
     and start the game
     """
-    client = mqtt.Client()
-    client.on_connect = on_connect
-    client.on_message = on_message
+    # client = mqtt.Client()
+    # client.on_connect = on_connect
+    # client.on_message = on_message
     # client.connect("192.168.1.32", 4269, 60)
     # client.username_pw_set("11:22:44:55", "123")
 
-    client.loop_start()
+    # client.loop_start()
     # time.sleep(1)
     # while True:
     # client.publish("Message", "Getting Started with MQTT")
     # print("Message Sent")
     # time.sleep(15)
     root = Tk()
-    PuzzleGame.PuzzleGame(root, client)
+    PuzzleGame.PuzzleGame(root, None)
     root.mainloop()
 
-    client.loop_stop()
-    client.disconnect()
+    # client.loop_stop()
+    # client.disconnect()
 
 
 if __name__ == "__main__":

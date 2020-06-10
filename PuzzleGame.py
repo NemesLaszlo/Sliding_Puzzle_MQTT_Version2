@@ -28,12 +28,12 @@ class PuzzleGame:
         self.parent = parent
         self.client = client
         self.grid = 3  # 3x3 board game, for picture cutting.
-        self.send_config_xml_to_broker()  # send the xml config file about this game to the mqtt broker.
+        # self.send_config_xml_to_broker()  # send the xml config file about this game to the mqtt broker.
         self.board = Frame(self.parent)
         self.start()
         # keepalive topic writer thread in every 30sec, to the broker (this device is online)
-        keepalive_thread = threading.Thread(target=thread_function, args=(self.client,))
-        keepalive_thread.start()
+        # keepalive_thread = threading.Thread(target=thread_function, args=(self.client,))
+        # keepalive_thread.start()
 
     def send_config_xml_to_broker(self):
         """
